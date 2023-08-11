@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "malls",
+  "info": {
+    "singularName": "mall",
+    "pluralName": "malls",
+    "displayName": "Mall",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Openingdata": {
+      "type": "component",
+      "repeatable": true,
+      "component": "openingdata.opening"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "malls"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "mall"
+    }
+  }
+}

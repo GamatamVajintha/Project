@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "Review",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "mall": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mall.mall",
+      "inversedBy": "reviews"
+    }
+  }
+}

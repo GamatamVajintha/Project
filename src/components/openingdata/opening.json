@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_openingdata_openings",
+  "info": {
+    "displayName": "opening",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "openingtiming": {
+      "type": "string"
+    },
+    "openingdays": {
+      "type": "string"
+    }
+  }
+}
